@@ -8,6 +8,7 @@ import { styles } from "./styles";
 import { services } from "../constants";
 import { SectionWrapper } from "../hoc";
 import { fadeIn, textVariant } from "../utils/motion";
+import Image from "next/image";
 interface Props {
   index: number;
   title: string;
@@ -24,7 +25,7 @@ const ServiceCard = ({ index, title, icon }: Props) => (
         // }}
         className="bg-tertiary rounded-[20px] py-5 px-12 min-h-[280px] flex justify-evenly items-center flex-col"
       >
-        <img src={icon.src} alt="web-development" className="w-16 h-16 object-contain" />
+        <Image src={icon.src} alt="web-development" width={200} height={200} className="w-16 h-16 object-contain" />
 
         <h3 className="text-white text-[20px] font-bold text-center">{title}</h3>
       </div>
