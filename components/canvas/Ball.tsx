@@ -22,7 +22,9 @@ const Ball = (props: Props) => {
   );
 };
 interface Icon {
-  icon: string;
+  icon: {
+    src: string;
+  };
 }
 
 const BallCanvas = ({ icon }: Icon) => {
