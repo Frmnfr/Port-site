@@ -5,6 +5,7 @@ import { styles } from "./styles";
 import { SectionWrapper } from "../hoc";
 import { fadeIn, textVariant } from "../utils/motion";
 import { testimonials } from "../constants";
+import Image from "next/image";
 
 const FeedbackCard = ({ index, testimonial, name, designation, company, image }) => (
   <motion.div variants={fadeIn("", "spring", index * 0.5, 0.75)} className="bg-slate-950 p-10 rounded-3xl xs:w-[320px] w-full">
@@ -23,7 +24,7 @@ const FeedbackCard = ({ index, testimonial, name, designation, company, image })
           </p>
         </div>
 
-        <img src={image} alt={`feedback_by-${name}`} className="w-10 h-10 rounded-full object-cover" />
+        <Image height={40} width={40} src={image} alt={`feedback_by-${name}`} className="w-10 h-10 rounded-full object-cover" />
       </div>
     </div>
   </motion.div>
